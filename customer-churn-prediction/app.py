@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 # Load model and columns
-model = joblib.load("C:/Users/rajku/Documents/customer-churn-prediction/churn_model.pkl")
-model_columns = joblib.load("C:/Users/rajku/Documents/customer-churn-prediction/model_columns.pkl")
+model = joblib.load("customer-churn-prediction/churn_model.pkl")
+model_columns = joblib.load("customer-churn-prediction/model_columns.pkl")
 
 st.title("📉 Customer Churn Prediction")
 
@@ -63,3 +63,4 @@ elif prob >= 0.35:
     st.warning("⚠️ Medium risk of churn")
 else:
     st.success("✅ Low churn risk")
+
