@@ -1,21 +1,144 @@
-# Customer Churn Prediction
+🚀 Customer Churn Prediction – Full Stack ML Deployment
 
-## Overview
-Built a machine learning model to predict customer churn using the Telco Churn dataset. The project covers end-to-end data cleaning, feature engineering, model training, and evaluation with a focus on business-driven metrics.
+A complete end-to-end Machine Learning project deployed to the cloud.
 
-## Dataset
-Telco Customer Churn Dataset
+This project predicts whether a customer is likely to churn using a trained Scikit-Learn pipeline, served via FastAPI, and connected to a Streamlit frontend.
 
-## Approach
-- Cleaned and preprocessed raw data (handled missing values, fixed numeric strings, removed identifiers)
-- Encoded categorical variables
-- Trained a Logistic Regression model
-- Evaluated performance using ROC-AUC and classification metrics
-- Tuned classification threshold to improve churn recall
+🌐 Live Demo
+🔹 Frontend (Streamlit Cloud)
 
-## Results
-- ROC-AUC: **0.86**
-- Churn recall improved from **57% → 73%** through threshold tuning
+👉 https://churn-prediction-9dgmcvmccbxdsx8qrczmzt.streamlit.app/
 
-## Tech Stack
-Python, Pandas, NumPy, Scikit-learn
+🔹 Backend API (Render – FastAPI)
+
+👉 https://churn-prediction-3cag.onrender.com
+
+🔹 Interactive API Docs (Swagger)
+
+👉 https://churn-prediction-3cag.onrender.com/docs
+
+🏗️ Architecture
+Streamlit (Frontend - Cloud)
+        ↓ HTTP POST
+FastAPI (Backend - Render)
+        ↓
+
+        
+Scikit-Learn Pipeline (Preprocessing + Model)
+Stack Used
+Python
+Scikit-Learn
+Pandas
+FastAPI
+Uvicorn
+Streamlit
+
+Render (Backend Hosting)
+Streamlit Cloud (Frontend Hosting)
+GitHub (Version Control)
+
+🧠 Machine Learning Details
+Model
+Logistic Regression
+Preprocessing
+ColumnTransformer
+OneHotEncoder for categorical features
+StandardScaler for numerical features
+Complete Pipeline object saved using joblib
+
+Why Pipeline?
+Because:
+Ensures preprocessing during training and inference is identical
+Prevents data leakage
+Makes deployment clean and production-ready
+
+📦 Project Structure
+churn-prediction/
+│
+├── app.py                 # FastAPI backend
+├── model.pkl              # Saved sklearn pipeline
+├── streamlit_app.py       # Streamlit frontend
+├── requirements.txt
+├── README.md
+└── ...
+
+
+🔥 Features
+End-to-End ML pipeline
+REST API for predictions
+Interactive Web UI
+Cloud-to-Cloud communication
+Production deployment setup
+Swagger API documentation
+Clean separation of frontend and backend
+
+🧪 How Prediction Works
+User fills form in Streamlit UI.
+Data is sent via POST request to FastAPI /predict.
+Backend loads trained pipeline.
+Pipeline performs preprocessing + prediction.
+Result returned as JSON.
+Streamlit displays prediction + probability.
+
+🛠️ Run Locally
+1️⃣ Clone Repository
+git clone https://github.com/your-username/churn-prediction.git
+cd churn-prediction
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Run Backend
+uvicorn app:app --reload
+
+4️⃣ Run Frontend
+streamlit run streamlit_app.py
+
+🚀 Deployment
+Backend
+Hosted on Render
+Uses Uvicorn ASGI server
+Public REST API endpoint
+Frontend
+Hosted on Streamlit Cloud
+Connected to Render backend via HTTPS
+
+📊 Example API Request
+POST → /predict
+{
+  "feature_1": "value",
+  "feature_2": 45,
+  ...
+}
+
+
+Response:
+{
+  "prediction": 1,
+  "probability": 0.87
+}
+
+📈 Future Improvements
+Add model comparison (RandomForest, XGBoost)
+Add feature importance visualization
+Add authentication
+Add Docker containerization
+Add CI/CD pipeline
+Add monitoring & logging
+Add database for storing predictions
+
+🎯 What This Project Demonstrates
+Real ML model training
+Proper use of Scikit-Learn Pipelines
+Backend API development
+Frontend-Backend integration
+Cloud deployment
+Debugging production issues
+Dependency management
+Version pinning & environment handling
+This is not a notebook project.
+This is a deployed ML system.
+
+👨‍💻 Author
+Rajkumar Math
+seeking knowledge
