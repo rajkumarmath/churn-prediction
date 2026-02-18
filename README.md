@@ -76,7 +76,7 @@ Streamlit displays prediction + probability.
 
 🛠️ Run Locally
 1️⃣ Clone Repository
-git clone https://github.com/your-username/churn-prediction.git
+git clone https://github.com/rajkumarmath/churn-prediction.git
 cd churn-prediction
 
 2️⃣ Install Dependencies
@@ -136,4 +136,5 @@ This is a deployed ML system.
 👨‍💻 Author
 Rajkumar Math
 seeking knowledge
+
 
