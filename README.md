@@ -5,17 +5,11 @@ A complete end-to-end Machine Learning project deployed to the cloud.
 This project predicts whether a customer is likely to churn using a trained Scikit-Learn pipeline, served via FastAPI, and connected to a Streamlit frontend.
 
 🌐 Live Demo
-🔹 Frontend (Streamlit Cloud)
+🔹 Frontend [Streamlit Cloud](https://churn-prediction-9dgmcvmccbxdsx8qrczmzt.streamlit.app/)
 
-👉 https://churn-prediction-9dgmcvmccbxdsx8qrczmzt.streamlit.app/
+🔹 Backend API [Render – FastAPI](https://churn-prediction-3cag.onrender.com)
 
-🔹 Backend API (Render – FastAPI)
-
-👉 https://churn-prediction-3cag.onrender.com
-
-🔹 Interactive API Docs (Swagger)
-
-👉 https://churn-prediction-3cag.onrender.com/docs
+🔹 Interactive API Docs [Swagger](https://churn-prediction-3cag.onrender.com/docs)
 
 🏗️ Architecture
 Streamlit (Frontend - Cloud)
@@ -142,3 +136,4 @@ This is a deployed ML system.
 👨‍💻 Author
 Rajkumar Math
 seeking knowledge
+
